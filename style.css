@@ -1,0 +1,76 @@
+/* Colors */
+
+.dark-blue {
+    color: #0034ae;
+}
+
+.light-blue {
+    color: #17ddff;
+}
+
+/* Fonts */
+
+@font-face {
+    font-family: "Almarai-Regular";
+    src: url("fonts/Almarai-Regular.ttf");
+}
+  
+* {
+        font-family: "Almarai-Regular";
+}
+
+/* Styles */
+
+.animated_link a {
+    color: #0034ae !important;
+    transition: ease 0.5s;
+}
+
+.animated_link a:hover {
+    color: #17ddff !important;
+    transition: ease 0.5s;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.form-control {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0rem 1rem #0034ae50;
+}
+
+.form-select {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0rem 1rem #0034ae50;
+}
+
+.btn-1 {
+    border-radius: 10px;
+    border: none;
+    width: 100px;
+    transition: 0.3s;
+    background-color: #0034ae;
+    color: white;
+    font-size: 15px;
+}
+
+.btn-1:hover {
+  background-color: #17ddff !important;
+  color: #0034ae;
+  transition: 0.3s;
+}
+
+.card-1 {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0rem 1rem #0034ae50;
+}
+
+.img-1 {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
