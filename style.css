@@ -40,12 +40,23 @@
     border: none;
     border-radius: 10px;
     box-shadow: 0 0rem 1rem #0034ae50;
+    border-bottom: 3px solid #0034ae;
 }
 
 .form-select {
     border: none;
     border-radius: 10px;
     box-shadow: 0 0rem 1rem #0034ae50;
+    border-bottom: 3px solid #0034ae;
+}
+
+.form-check-input:checked {
+    background-color: #0034ae;
+    border-color: #0034ae;
+}
+
+.myrounded {
+    border-radius: 7px;
 }
 
 .btn-1 {
@@ -60,7 +71,39 @@
 
 .btn-1:hover {
   background-color: #17ddff !important;
+  color: #0034ae !important;
+  transition: 0.3s;
+}
+
+.btn-2 {
+    border-radius: 10px;
+    border: none;
+    width: 150px;
+    transition: 0.3s;
+    background-color: #0034ae;
+    color: white;
+    font-size: 15px;
+}
+
+.btn-2:hover {
+  background-color: #17ddff !important;
   color: #0034ae;
+  transition: 0.3s;
+}
+
+.btn-3 {
+    border-radius: 10px;
+    border: none;
+    width: 150px;
+    transition: 0.3s;
+    background-color: #17ddff;
+    color: #0034ae;
+    font-size: 15px;
+}
+
+.btn-3:hover {
+  background-color:  #0034ae !important;
+  color: white !important;
   transition: 0.3s;
 }
 
@@ -70,7 +113,35 @@
     box-shadow: 0 0rem 1rem #0034ae50;
 }
 
-.img-1 {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+.card-animation {
+    transition: 0.3s;
+    background-color: white;
+}
+
+.card-animation:hover {
+  background-color: #f0f0f0 !important;
+  transition: 0.3s;
+}
+
+.footer {
+    /* background-color: #0034ae; */
+    background: radial-gradient(circle, #0034ae 0%, #000046 100%);
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: #0034ae;
+}
+
+@media only screen and (max-width: 767px) {
+    .img-1 {
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+  }
+
+  @media only screen and (min-width : 768px) {
+    .img-1 {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
 }

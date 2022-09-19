@@ -7,18 +7,23 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.rtl.min.css" integrity="sha384-OXTEbYDqaX2ZY/BOaZV/yFGChYHtrXH2nyXJ372n2Y8abBhrqacCEe+3qhSHtLjy" crossorigin="anonymous">
+    <link href="node_modules/lightbox2/src/css/lightbox.css" rel="stylesheet" />
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="owlcarousel/carousel.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
-    <title>موقع لعرض العقارات</title>
+    <title>عقارات - موقع لعرض العقارات</title>
   </head>
   <body>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-light shadow">
         <div class="container">
-          <a class="navbar-brand" href="#">
-            <img src="imgs/logo.svg" alt="" width="100">
+          <a class="navbar-brand" href="index.html">
+            <img src="imgs/logo.svg" alt="aqarat-logo" width="100">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -26,7 +31,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto animated_link">
               <li class="nav-item">
-                <a class="nav-link fw-bold" aria-current="page" href="#">الرئيسية</a>
+                <a class="nav-link fw-bold" aria-current="page" href="index.html">الرئيسية</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" aria-current="page" href="add-new.html">أضف إعلانك</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link fw-bold" aria-current="page" href="#">جديد عقارات</a>
@@ -35,10 +43,10 @@
                 <a class="nav-link fw-bold" aria-current="page" href="#">عن عقارات</a>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="ابحث عن عقار" aria-label="Search">
-              <button class="btn-1" type="submit">بحث<i class="fa-solid fa-magnifying-glass-location ms-2"></i></button>
-            </form>
+            <div class="d-flex justify-content-center mt-3 mt-lg-0">
+              <a href="login.html"><button class="btn btn-2 me-3" type="button">تسجيل الدخول<i class="fas fa-user ms-2"></i></button></a>
+              <a href="register.html"><button class="btn btn-3" type="button">إنشاء حساب<i class="fas fa-plus ms-2"></i></button></a>
+            </div>
           </div>
         </div>
       </nav>
@@ -52,10 +60,16 @@
       </section>
 
       <!-- Contents -->
-
       <section class="mt-5">
         <div class="container">
-          <div class="row d-flex justify-content-center">
+          <div class="row d-flex justify-content-center g-4 px-2">
+            <div class="col-md-2">
+              <select class="form-select" aria-label="Default select example">
+                <option selected>فلل للبيع</option>
+                <option value="1">شقق للبيع</option>
+                <option value="2">شقق للإيجار</option>
+              </select>
+            </div>
               <div class="col-md-2">
                 <select class="form-select" aria-label="Default select example">
                   <option selected>الرياض</option>
@@ -78,33 +92,40 @@
                   <option value="2">حطين</option>
                 </select>
               </div>
+              <div class="col-md-3">
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="ابحث عن عقار" aria-label="Search">
+                  <button class="btn-1" type="submit">بحث<i class="fa-solid fa-magnifying-glass-location ms-2"></i></button>
+                </form>
+              </div>
           </div>
         </div>
       </section>
       
       <section class="mt-5">
         <div class="container">
-          <h1 class="fs-4 text-center mb-5">فلل للبيع في حي المرسلات</h1>
+          <h1 class="fs-4 text-center mb-5">نتائج البحث: "فلل للبيع في حي المرسلات"</h1>
           <div class="row">
             
             <div class="col-12 d-flex justify-content-center">
-                  <div class="card card-1 mb-3" style="width: 90%;">
+                  <div class="card card-1 card-animation mb-3" style="width: 90%; min-height: 215px;">
                     <div class="row g-0">
                       <div class="col-md-4">
-                        <img src="imgs/house-image.jpg" class="img-1 img-fluid" alt="..." style="object-fit: cover; height: 100%; width: 100%;">
+                        <img src="imgs/house-image.jpg" class="img-1 img-fluid d-flex mx-auto" alt="..." style="object-fit: cover; height: 262px; width: 100%;">
                       </div>
                       <div class="col-md-8">
-                        <div class="card-body">
-                          <div class="row">
+                        <a href="show.html" style="text-decoration:none;" class="text-black">
+                          <div class="card-body">
+                          <div class="row mt-3">
                             <div class="col-8">
                               <h5 class="card-title text-start mb-4">فيلا سكنية للبيع في حي المرسلات</h5>
                             </div>
                             <div class="col-4">
-                              <p class="card-text text-muted text-end">3 ساعة <i class="fa-regular fa-clock ms-1"></i></p>
+                              <p class="card-text text-muted text-end">الآن<i class="fa-regular fa-clock ms-2"></i></p>
                             </div>
                           </div>
                           <p class="card-text">تتكون كل وحدة من مجلس، غرفة للطعام، صالة، مطبخ، غرفة نوم رئيسية، (اثنين أو ثلاث غرف نوم) ومستودع، وقد تم الأخذ بعين الاعتبار استقلالية الوحدات ولكل منهما مدخل خاص، وموقف للسيارة مستقل، وخزان ماء وبيارة وعدادي الكهرباء والماء.</p>
-                          <div class="row">
+                          <div class="row mt-5">
                             <div class="col-lg-4 d-flex justify-content-center">
                               <p class="fs-5 dark-blue"><i class="fa-solid fa-chart-area me-3"></i>500<span class="ms-2">م²</span></p>
                             </div>
@@ -116,29 +137,31 @@
                             </div>
                           </div>
                         </div>
+                      </a>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div class="col-12 d-flex justify-content-center mt-2">
-                  <div class="card card-1 mb-3" style="width: 90%;">
+                <div class="col-12 d-flex justify-content-center">
+                  <div class="card card-1 card-animation mb-3" style="width: 90%; min-height: 215px;">
                     <div class="row g-0">
                       <div class="col-md-4">
-                        <img src="imgs/house-image.jpg" class="img-1 img-fluid" alt="..." style="object-fit: cover; height: 100%; width: 100%;">
+                        <img src="imgs/house-image.jpg" class="img-1 img-fluid d-flex mx-auto" alt="..." style="object-fit: cover; height: 262px; width: 100%;">
                       </div>
                       <div class="col-md-8">
-                        <div class="card-body">
-                          <div class="row">
+                        <a href="show.html" style="text-decoration:none;" class="text-black">
+                          <div class="card-body">
+                          <div class="row mt-3">
                             <div class="col-8">
                               <h5 class="card-title text-start mb-4">فيلا سكنية للبيع في حي المرسلات</h5>
                             </div>
                             <div class="col-4">
-                              <p class="card-text text-muted text-end">3 ساعة <i class="fa-regular fa-clock ms-1"></i></p>
+                              <p class="card-text text-muted text-end">الآن<i class="fa-regular fa-clock ms-2"></i></p>
                             </div>
                           </div>
                           <p class="card-text">تتكون كل وحدة من مجلس، غرفة للطعام، صالة، مطبخ، غرفة نوم رئيسية، (اثنين أو ثلاث غرف نوم) ومستودع، وقد تم الأخذ بعين الاعتبار استقلالية الوحدات ولكل منهما مدخل خاص، وموقف للسيارة مستقل، وخزان ماء وبيارة وعدادي الكهرباء والماء.</p>
-                          <div class="row">
+                          <div class="row mt-5">
                             <div class="col-lg-4 d-flex justify-content-center">
                               <p class="fs-5 dark-blue"><i class="fa-solid fa-chart-area me-3"></i>500<span class="ms-2">م²</span></p>
                             </div>
@@ -150,6 +173,45 @@
                             </div>
                           </div>
                         </div>
+                      </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <h1 class="fs-4 text-center my-5">إعلانات مشابهة لـ "فلل للبيع في حي المرسلات"</h1>
+
+                <div class="col-12 d-flex justify-content-center mt-2">
+                  <div class="card card-1 card-animation mb-3" style="width: 90%; min-height: 215px;">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="imgs/1109192407865372001.jpg" class="img-1 img-fluid d-flex mx-auto" alt="..." style="object-fit: cover; height: 262px; width: 100%;">
+                      </div>
+                      <div class="col-md-8">
+                        <a href="show.html" style="text-decoration:none;" class="text-black">
+                        <div class="card-body">
+                          <div class="row mt-3">
+                            <div class="col-8">
+                              <h5 class="card-title text-start mb-4">فيلا سكنية للبيع في حي الملقا</h5>
+                            </div>
+                            <div class="col-4">
+                              <p class="card-text text-muted text-end">3 ساعة<i class="fa-regular fa-clock ms-2"></i></p>
+                            </div>
+                          </div>
+                          <p class="card-text">تتكون كل وحدة من مجلس، غرفة للطعام، صالة، مطبخ، غرفة نوم رئيسية، (اثنين أو ثلاث غرف نوم) ومستودع، وقد تم الأخذ بعين الاعتبار استقلالية الوحدات ولكل منهما مدخل خاص، وموقف للسيارة مستقل، وخزان ماء وبيارة وعدادي الكهرباء والماء.</p>
+                          <div class="row mt-5">
+                            <div class="col-lg-4 d-flex justify-content-center">
+                              <p class="fs-5 dark-blue"><i class="fa-solid fa-chart-area me-3"></i>650<span class="ms-2">م²</span></p>
+                            </div>
+                            <div class="col-lg-4 d-flex justify-content-center">
+                              <p class="fs-5 dark-blue"><i class="fa-solid fa-location-dot me-3"></i>الملقا</p>
+                            </div>
+                            <div class="col-lg-4 d-flex justify-content-center">
+                              <p class="fs-5" style="color: #10b462"><i class="fa-solid fa-sack-dollar me-3"></i>2,800,000<span class="ms-2">ريال</span></p>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
                       </div>
                     </div>
                   </div>
@@ -159,11 +221,32 @@
         </div>
       </section>
 
+      <!-- Footer -->
+      <footer style="padding-top: 100px;">
+        <div class="footer text-center">
+          <div class="container">
+                <div class="row py-3">
+                  <div class="col-sm-6">
+                    <img src="imgs/logo-white.png" alt="aqarat-logo" width="100px">
+                  </div>
+                  <div class="col-sm-6 pt-3">
+                    <h1 class="fs-6 text-light">جميع الحقوق محفوظة © لـ عقارات 2022</h1>
+                  </div>
+                </div>
+            </div>
+          </div>
+      </footer>
+
 
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="node_modules/lightbox2/src/js/lightbox.js"></script>
+    <script src="owlcarousel/jquery.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <script src="owlcarousel/carousel.js"></script>
     <script src="script.js"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
