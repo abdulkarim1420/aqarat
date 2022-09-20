@@ -36,6 +36,10 @@
     padding-right: 1.5rem;
 }
 
+a {
+    text-decoration: none;
+ }
+
 .form-control {
     border: none;
     border-radius: 10px;
@@ -53,6 +57,12 @@
 .form-check-input:checked {
     background-color: #0034ae;
     border-color: #0034ae;
+}
+
+.form-check-input[type=checkbox] {
+    border: none;
+    box-shadow: 0 0rem 1rem #0034ae50;
+    border-bottom: 2px solid #0034ae;
 }
 
 .myrounded {
