@@ -21,6 +21,11 @@
 
 /* Styles */
 
+.overflow-none {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
 .animated_link a {
     color: #0034ae !important;
     transition: ease 0.5s;
