@@ -1,5 +1,3 @@
-AOS.init();
-
 let owl = $(".owl-carousel").owlCarousel({
     dots: true,
     nav: false,
@@ -32,3 +30,5 @@ let owl = $(".owl-carousel").owlCarousel({
     // Parameters has to be in square bracket '[]'
     owl.trigger('prev.owl.carousel', [300]);
   });
+
+  AOS.init();
